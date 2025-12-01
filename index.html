@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Services by Kavya Singh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #070b12;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+    header {
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    header h1 { font-size: 1.3rem; }
+    header nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #c0c4ff;
+      font-size: 0.9rem;
+    }
+    .hero {
+      max-width: 1000px;
+      margin: 2rem auto 3rem;
+      padding: 1.5rem;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+    }
+    .hero-text h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .hero-text p { color: #c2c6d9; margin-bottom: 1rem; }
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.7rem;
+      font-size: 0.75rem;
+      border-radius: 999px;
+      border: 1px solid #303650;
+      margin-bottom: 0.75rem;
+      color: #c0c4ff;
+    }
+    .btn-row {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .btn-primary, .btn-ghost {
+      padding: 0.7rem 1.3rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #6366f1, #22c55e);
+      color: white;
+    }
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid #3a415f;
+      color: #d1d5ff;
+    }
+    .hero-card {
+      border-radius: 1rem;
+      border: 1px solid #272b3f;
+      padding: 1.2rem;
+      background: radial-gradient(circle at top, #1b2140, #050811);
+    }
+    .hero-card h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+    .hero-card ul { list-style: none; font-size: 0.85rem; color: #c6caf5; }
+    .hero-card li { margin-bottom: 0.4rem; }
+    .hero-card li::before { content: "• "; color: #4ade80; }
+    .section {
+      max-width: 1000px;
+      margin: 0 auto 2.5rem;
+      padding: 0 1.5rem;
+    }
+    .section h3 { font-size: 1.2rem; margin-bottom: 0.8rem; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      border-radius: 0.9rem;
+      border: 1px solid #272b3f;
+      padding: 1rem;
+      background: #050815;
+      font-size: 0.9rem;
+    }
+    .card h4 { margin-bottom: 0.4rem; }
+    .card p { color: #b8bcd9; font-size: 0.85rem; }
+    .price {
+      font-weight: 600;
+      margin-top: 0.6rem;
+      font-size: 0.85rem;
+      color: #a5b4fc;
+    }
+    footer {
+      max-width: 1000px;
+      margin: 0 auto 2rem;
+      padding: 0 1.5rem;
+      font-size: 0.8rem;
+      color: #787c9e;
+      text-align: center;
+    }
+    .contact-box {
+      border-radius: 1rem;
+      border: 1px solid #272b3f;
+      padding: 1rem;
+      background: #050815;
+      font-size: 0.9rem;
+    }
+    .contact-row {
+      margin-top: 0.7rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .contact-row span { font-size: 0.85rem; }
+    .whatsapp-link {
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      border: 1px solid #22c55e;
+      font-size: 0.85rem;
+      color: #22c55e;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Kavya Singh</h1>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#work">How I Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <span class="badge">AI-Powered Freelance Services</span>
+    <h2>I use AI to save your time & grow your business.</h2>
+    <p>
+      Short videos, social media posts, and smart content — created fast with AI + human touch.
+      Perfect for small businesses, coaches, and creators.
+    </p>
+    <div class="btn-row">
+      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        Get a free sample
+      </button>
+      <button class="btn-ghost" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+        View services & pricing
+      </button>
+    </div>
+  </div>
+
+  <div class="hero-card">
+    <h3>What I can do for you</h3>
+    <ul>
+      <li>Instagram reels scripts & captions</li>
+      <li>Eye-catching posters for WhatsApp/Instagram</li>
+      <li>Professional AI-written bio, about, & profile</li>
+      <li>Ready-to-post content so you don't waste time</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <h3>Services & Pricing (Flexible)</h3>
+  <div class="services-grid">
+    <div class="card">
+      <h4>Social Media Starter Pack</h4>
+      <p>5 custom posts (captions + design ideas).</p>
+      <p class="price">Starts from ₹499</p>
+    </div>
+    <div class="card">
+      <h4>Reels Script Pack</h4>
+      <p>10 short content ideas + ready scripts.</p>
+      <p class="price">Starts from ₹699</p>
+    </div>
+    <div class="card">
+      <h4>Profile Makeover</h4>
+      <p>Optimized bio & introduction using AI.</p>
+      <p class="price">Starts from ₹299</p>
+    </div>
+    <div class="card">
+      <h4>Custom Plan</h4>
+      <p>Personal branding or business growth plan.</p>
+      <p class="price">Price: on chat</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="work">
+  <h3>How I Work</h3>
+  <div class="card">
+    <p>1. You share your goal.</p>
+    <p>2. I generate AI + manual edited content.</p>
+    <p>3. You receive ready-to-use content.</p>
+    <p>4. Easy UPI payment.</p>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <h3>Contact & Booking</h3>
+  <div class="contact-box">
+    <p>Interested? DM me on Instagram for a free sample.</p>
+    <div class="contact-row">
+      <span>Chat on Instagram:</span>
+      <a class="whatsapp-link" href="https://instagram.com/kavyyaa009" target="_blank">
+        Message me on Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © <span id="year"></span> Kavya Singh. All rights reserved.
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
